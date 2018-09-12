@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
 		<style>
 			.wrapper {
 				display: flex;
@@ -19,7 +20,9 @@
 				border-radius: 8px;
 			}
 			.headline {
-
+				font-family: 'Gamja Flower', cursive;
+				font-size: 40px;
+				color: red;
 			}
 			.big-text {
 				font-size: 36px;
@@ -33,11 +36,71 @@
 		    animation-play-state: running;
 		}
 
+		.green {
+			color: lime;
+		}
+
+		.button {
+			appearance: none;
+			display: flex;
+			flex-direction: column;
+			outline: none;
+			border: 0;
+			border-radius: 40px;
+			padding: 8px 30px 15px 30px;
+			margin: auto;
+			height: 40px;
+			color: black;
+			font-weight: bold;
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+
+		.button:hover {
+			cursor: pointer;
+			outline: none;
+			border: 0;
+			box-shadow: 0 0 5px rgba(255,255,255,.8);
+			transition: all 600ms ease-in-out;
+		}
+
+		.color {
+			background: lime;
+			margin-bottom: 15px;
+		}
+
+		.color:hover {
+			background: gold;
+		}
+
+		.size {
+			background: red;
+		}
+
+		.size:hover {
+			background: white;
+		}
+
+		.bigger {
+			font-size: 48px;
+		}
+
 		@keyframes flash {
 		    from {color: red;}
 		    to {color: black;}
 		}
 		</style>
+
+		<script>
+			const changeColor = () => {
+				document.getElementById('words').classList.toggle("green");
+			}
+
+			const embiggen = () => {
+				document.getElementById('words').classList.toggle("bigger");
+			}
+
+		</script>
 
 
 	</head>
@@ -45,12 +108,24 @@
 		<div class="wrapper">
 			<div class="text-wrap">
 				<h2 class="headline">here is some actual code </h2>
-				<div class="big-text">
+				<div class="big-text" id="words">
 					random letters
 					<p>yeah</p>
 					<p>stop it</p>
 					<p>pflfpffffff</p>
 					<p>actual code mommy!!!</p>
+					<button
+						class="button color"
+						onClick="changeColor()"
+						>
+						Change color
+					</button>
+					<button
+						class="button size"
+						onClick="embiggen()"
+						>
+						Embiggen
+					</button>
 				</div>
 			</div>
 		</div>
