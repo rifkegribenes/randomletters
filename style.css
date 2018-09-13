@@ -1,0 +1,99 @@
+
+			.wrapper {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 100vw;
+				height: 100vh;
+				text-align: center;
+				background: #111111;
+				color: white;
+			}
+			.text-wrap {
+				padding: 40px;
+				max-width: 60%;
+				margin: auto;
+				border: 1px solid white;
+				border-radius: 8px;
+			}
+			.headline {
+				font-family: 'Gamja Flower', cursive;
+				font-size: 40px;
+				color: red;
+			}
+			.big-text {
+				font-size: 36px;
+			}
+			.flash {
+		   animation-name: flash;
+		    animation-duration: 0.2s;
+		    animation-timing-function: linear;
+		    animation-iteration-count: infinite;
+		    animation-direction: alternate;
+		    animation-play-state: running;
+		}
+
+		.green {
+			color: lime;
+		}
+
+		.button {
+			appearance: none;
+			display: flex;
+			flex-direction: column;
+			outline: none;
+			border: 0;
+			border-radius: 40px;
+			padding: 8px 30px 15px 30px;
+			margin: auto;
+			height: 40px;
+			color: black;
+			font-weight: bold;
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+
+		.button:hover {
+			cursor: pointer;
+			outline: none;
+			border: 0;
+			box-shadow: 0 0 5px rgba(255,255,255,.8);
+			transition: all 600ms ease-in-out;
+		}
+
+		.color {
+			background: lime;
+			margin-bottom: 15px;
+		}
+
+		.color:hover {
+			background: gold;
+		}
+
+		.size {
+			background: red;
+			margin-bottom: 15px;
+		}
+
+		.size:hover {
+			background: white;
+		}
+
+		.sound {
+			background: darkblue;
+			color: white;
+			border: 1px solid lightblue;
+		}
+
+		.sound:hover {
+			background: silver;
+		}
+
+		.bigger {
+			font-size: 48px;
+		}
+
+		@keyframes flash {
+		    from {color: red;}
+		    to {color: black;}
+		}
