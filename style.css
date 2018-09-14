@@ -93,7 +93,59 @@
 			font-size: 48px;
 		}
 
+		.spin-button {
+			margin-top: 60px;
+			background: white;
+			color: black;
+		}
+
+		.spin-button:hover {
+			background: lightgreen;
+		}
+
+		.doggy-wrap {
+			margin-top: 30px;
+		}
+
+		.invisible {
+			display: none;
+		}
+
+		.doggy {
+			width: 100px;
+			height: auto;
+		}
+
+		.spin {
+			-webkit-animation-name: spin;
+		  -webkit-animation-duration: 1000ms;
+		  -webkit-animation-iteration-count: infinite;
+		  -webkit-animation-timing-function: linear;
+		  -moz-animation-name: spin;
+		  -moz-animation-duration: 1000ms;
+		  -moz-animation-iteration-count: infinite;
+		  -moz-animation-timing-function: linear;
+		  -ms-animation-name: spin;
+		  -ms-animation-duration: 1000ms;
+		  -ms-animation-iteration-count: infinite;
+		  -ms-animation-timing-function: linear;
+		  -o-transition: rotate(3600deg);
+		}
+
 		@keyframes flash {
 		    from {color: red;}
 		    to {color: black;}
 		}
+
+		@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}

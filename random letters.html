@@ -1,11 +1,24 @@
 <html>
 	<head>
 		<link href="style.css" rel="stylesheet">
+		<script type="text/javascript" src="script.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
 	</head>
 	<body>
 		<div class="wrapper">
 			<div class="text-wrap">
+				<button
+					class="button spin-button"
+					onClick="spinDoggyFunction()"
+					>
+					<span id="spinDoggyText"></span>
+				</button>
+				<div class="doggy-wrap invisible" id="doggy-wrap">
+					<img
+						class="doggy spin"
+						src="dogman.png"
+						/>
+				</div>
 				<h2 class="headline">here is some actual code </h2>
 				<div class="big-text" id="words">
 					let's do some math ok?
@@ -34,7 +47,6 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="script.js"></script>
 	</body>
 
 
