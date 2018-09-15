@@ -25,6 +25,11 @@
 		const embiggen = () => {
 			document.getElementById('words').classList.toggle("bigger");
 			state.bigText = !state.bigText;
+			if (state.bigText) {
+				document.getElementById('embiggenText').innerHTML = "Smallify";
+			} else {
+				document.getElementById('embiggenText').innerHTML = "Embiggen";
+			}
 		};
 
 		const playSound = (val) => {
@@ -42,6 +47,12 @@ window.onload = function(){
 			document.getElementById('spinDoggyText').innerHTML = "Stop Doggy";
 		} else {
 			document.getElementById('spinDoggyText').innerHTML = "Spin Doggy";
+		}
+
+		if (state.bigText) {
+			document.getElementById('embiggenText').innerHTML = "Smallify";
+		} else {
+			document.getElementById('embiggenText').innerHTML = "Embiggen";
 		}
 
 	}
