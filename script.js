@@ -5,6 +5,7 @@
 			audioPlaying: false
 		};
 
+		let sound;
 
 		const spinDoggyFunction = () => {
 			console.log('spinDoggy');
@@ -33,11 +34,19 @@
 		};
 
 		const playSound = (val) => {
-				console.log(val);
-		    var sound = document.createElement('audio');
-		    sound.setAttribute('autoplay', 'autoplay');
-		    sound.setAttribute('src', val);
-		    sound.play();
+				if (state.audioPlaying) {
+					sound.pause();
+					sound.currentTime = 0;
+					document.getElementById('soundText').innerHTML = "Listen up";
+					state.audioPlaying = !state.audioPlaying;
+				} else {
+					sound = document.createElement('audio');
+			    sound.setAttribute('autoplay', 'autoplay');
+			    sound.setAttribute('src', val);
+			    sound.play();
+			    document.getElementById('soundText').innerHTML = "Shut up";
+			    state.audioPlaying = !state.audioPlaying;
+				}
 		};
 
 
@@ -53,6 +62,12 @@ window.onload = function(){
 			document.getElementById('embiggenText').innerHTML = "Smallify";
 		} else {
 			document.getElementById('embiggenText').innerHTML = "Embiggen";
+		}
+
+		if (state.audioPlaying) {
+			document.getElementById('soundText').innerHTML = "Shut up";
+		} else {
+			document.getElementById('soundText').innerHTML = "Listen up";
 		}
 
 	}
